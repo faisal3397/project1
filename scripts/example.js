@@ -11,38 +11,38 @@
 //   These are from the scripting documentation: https://github.com/github/hubot/blob/master/docs/scripting.md
 
 module.exports = (robot) => {
-  robot.hear(/Hello/, function(res) {
-    let responses = ["Hello!", "Hi!","Wetin dey hapun", "Alsalam alikem", "你好" ]
-    let rand = Math.floor(Math.random() * responses.length)
-    return res.send(`${responses[rand]}`);
+
+  robot.respond(/cats/, function(res) {
+    let cats = [  "https://www.catster.com/wp-content/uploads/2018/05/A-gray-cat-crying-looking-upset.jpg",
+                  "https://news.nationalgeographic.com/content/dam/news/2018/05/17/you-can-train-your-cat/02-cat-training-NationalGeographic_1484324.ngsversion.1526587209178.adapt.1900.1.jpg",
+                  "https://www.bluecross.org.uk/sites/default/files/assets/images/124044lpr.jpg",
+                  "https://www.humanesociety.org/sites/default/files/styles/768x326/public/2018/08/kitten-440379.jpg"
+                    ]
+
+    let rand = Math.floor(Math.random() * cats.length)
+    return res.reply(`Here's a picture of a cat that could make your day :), ${cats[rand]}`);
   });
-  robot.hear(/badger/i, (res) => {
-    res.send('Badgers? BADGERS? WE DON`T NEED NO STINKIN BADGERS')
+
+  robot.hear(/GA/i, (res) => {
+    res.send('GA Rocks!!')
+    
   })
-  //
-  robot.respond(/open the (.*) doors (.*)/i, (res) => {
-    const doorType = res.match[1]
-    const doorType2 = res.match[2]
-  
-    // if (doorType === 'pod bay') {
-    //   res.reply('I'm afraid I can't let you do that.')
-    //   return
-    // }
-    // if(doorType2 === "hmm"){
-    //   res.reply('hmmm... what?')
-    //   return
-    // }
-  
-    res.reply(`Opening ${doorType} doors ${doorType2}`)
+
+  robot.respond(/Hello bot my name is (.*)/i, (res) => {
+    const name = res.match[1];
+
+    if(name == 'Faisal'){
+      res.reply(`hello master`);
+      return
+    }
+
+    res.reply(`Hello ${name}, It is nice to meet you`);
   })
+
+  const lulz = ['lol', 'rofl', 'lmao', 'hahahahahahaha']
   
-  robot.hear(/I like pie/i, (res) => {
-    res.emote('makes a freshly baked pie')
-  })
-  
-  const lulz = ['lol', 'rofl', 'lmao']
-  
-  robot.respond(`/${lulz.join('|')}/i`, (res) => {
+  robot.respond(`/lol/i`, (res) => {
     res.send(res.random(lulz))
   })
+
 }
