@@ -12,7 +12,7 @@
 
 module.exports = (robot) => {
 
-  var animals = {
+  var animals = { // object of animal pictures
     cat: "https://www.humanesociety.org/sites/default/files/styles/768x326/public/2018/08/kitten-440379.jpg",
     zebra: "https://thumbor.forbes.com/thumbor/1280x868/https%3A%2F%2Fblogs-images.forbes.com%2Fjvchamary%2Ffiles%2F2016%2F01%2Fzebra-1200x800.jpg",
     dog: "https://nhl.bamcontent.com/images/photos/301406224/1024x576/cut.jpg",
@@ -22,7 +22,7 @@ module.exports = (robot) => {
 
   }
 
-  var date = new Date();
+  var date = new Date(); //date object to get the day or hour 
 
 
   robot.hear(/GA/i, (res) => {
