@@ -27,6 +27,6 @@ __Installation:__
 - follow the __Basic Setup__ instructions in this page https://slackapi.github.io/hubot-slack/
 - open the terminal
 - cd to the folder that has your project
-- type this in your terminal to run the bot "HUBOT_SLACK_TOKEN=xoxb-540921544000-541882115349-2DlRKYnrp6P3zZYsRyuXt6HH bin/hubot --adapter slack"
+- type this in your terminal to run the bot "HUBOT_SLACK_TOKEN=[the token] bin/hubot --adapter slack"
 
 
