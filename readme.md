@@ -22,4 +22,11 @@ when you type this command it will reply to you with a picture of the animal tha
 __quote:__
 when you type quote the bot will reply to you with any random motivational quote
 
+__Installation:__
+- add Hubot to your Slack Workspace (click the + icon next to apps then search for "Hubot")
+- follow the __Basic Setup__ instructions in this page https://slackapi.github.io/hubot-slack/
+- open the terminal
+- cd to the folder that has your project
+- type this in your terminal to run the bot "HUBOT_SLACK_TOKEN=xoxb-540921544000-541882115349-2DlRKYnrp6P3zZYsRyuXt6HH bin/hubot --adapter slack"
+
 
